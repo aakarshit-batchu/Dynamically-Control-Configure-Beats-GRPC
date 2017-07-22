@@ -1,0 +1,25 @@
+/******** AUTHOR: NAGA SAI AAKARSHIT BATCHU ********/
+
+syntax = "proto3";
+
+package iot;
+
+service IOT {
+  rpc Beat (Config) returns (Response) {}
+}
+
+message Config {
+  string beat = 1;
+  string action = 2;
+  bytes data = 3;
+}
+
+message Response {
+  string name = 1;
+  string action = 2;
+  string code = 3;
+  string result = 4;
+  string message = 5;
+}
+
+/******** AUTHOR: NAGA SAI AAKARSHIT BATCHU ********/
